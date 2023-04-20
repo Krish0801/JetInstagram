@@ -28,7 +28,6 @@ import com.vipulasri.jetinstagram.R.drawable
 import com.vipulasri.jetinstagram.model.Post
 import com.vipulasri.jetinstagram.ui.components.*
 
-@ExperimentalFoundationApi
 @Composable
 fun PostView(
   post: Post,

@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
+import androidx.ui.tooling.preview.Preview
 import com.vipulasri.jetinstagram.R
 import com.vipulasri.jetinstagram.data.PostsRepository
 import com.vipulasri.jetinstagram.data.StoriesRepository
@@ -24,7 +25,7 @@ import com.vipulasri.jetinstagram.model.Story
 import com.vipulasri.jetinstagram.ui.components.icon
 import kotlinx.coroutines.launch
 
-@ExperimentalFoundationApi
+
 @Composable
 fun Home() {
 
@@ -118,7 +119,6 @@ private fun StoriesList(stories: List<Story>) {
   }
 }
 
-@ExperimentalFoundationApi
 @Composable
 private fun Post(
   post: Post,
@@ -126,4 +126,10 @@ private fun Post(
   onLikeToggle: (Post) -> Unit
 ) {
   PostView(post, onDoubleClick, onLikeToggle)
+}
+
+@Preview
+@Composable
+fun HomePreview(){
+  Home()
 }
